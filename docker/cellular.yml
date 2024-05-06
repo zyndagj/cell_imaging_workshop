@@ -1,0 +1,24 @@
+name: cellular
+channels:
+  - pytorch
+  - rapidsai
+  - conda-forge
+  - nvidia
+dependencies:
+  - jupyterlab-nvdashboard
+  - rapids=23.12
+  - python=3.10
+  - cuda-version=12.0
+  - geopandas
+  - ipykernel
+  - gdown
+  - curl
+  - make
+  - seaborn
+  - python-graphviz
+  - pip:
+    - opencv-python-headless
+      #    - cellpose==2.2.3
+      #  - pytorch
+      #  - torchvision
+      #  - pytorch-cuda

@@ -1,0 +1,8 @@
+data/he-registered-to-dapi-shlee.tif
+data/he-registered-to-dapi-shlee-patch-151_46_7311_5368.xml
+data/morphology_mip.ome.3.invert.tif
+*/.ipynb_checkpoints/*
+data/segmodel.pt
+data/cellpose/test
+data/cellpose/train_full
+data/cellpose/val

@@ -1,0 +1,18 @@
+FROM continuumio/miniconda3:24.3.0-0
+
+ADD cellular.yml /root/cellular.yml
+RUN conda config --set solver libmamba
+RUN conda env create --file /root/cellular.yml --solver=libmamba && conda clean -a
+RUN conda init --system
+RUN sed -i "s/activate base/activate cellular/" ~/.bashrc
+SHELL ["/bin/bash","-lc"]
+
+RUN apt-get update \
+	&& apt-get install -y curl vim-nox less \
+	&& apt-get clean \
+	&& rm -rf /var/lib/apt/lists/*
+
+RUN mkdir -p /mnt/workspace
+
+WORKDIR /mnt/workspace
+ENV SHELL=/bin/bash
